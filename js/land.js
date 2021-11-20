@@ -19,7 +19,6 @@ function setLandTitle() {
 		.append($('<th/>', { html : '면적(㎡)' }))
 		.append($('<th/>', { html : '층' }))
 		.append($('<th/>', { html : '금액(만원)' }))
-		.append($('<th/>', { html : '' }))
 	);
 }
 
@@ -31,7 +30,6 @@ function setLandContents(rows) {
 			.append($('<td/>', { html : row['전용면적'] }))
 			.append($('<td/>', { html : row['층'] }))
 			.append($('<td/>', { html : row['거래금액'] }))
-			.append($('<td/>', { html : row['구분'] }))
 		);
 	}
 }
