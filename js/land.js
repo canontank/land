@@ -36,6 +36,7 @@ function execute1() {
 }
 
 function execute2() {
+    setLandHeader();
     setAreaType();
     execute3();
 }
@@ -55,6 +56,10 @@ function setLandType() {
     }
     var iter = typeSet.values();
     landType = iter.next().value;
+}
+
+function setLandHeader() {
+    $("#landHeader").text(landType);
 }
 
 function setAreaType() {
