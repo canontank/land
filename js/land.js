@@ -1,5 +1,4 @@
 var rows;
-
 var landType = "";
 var areaType = "";
 
@@ -59,6 +58,8 @@ function setLandType() {
 }
 
 function setAreaType() {
+    $('#areaType option').remove();
+    areaType = "";
     var areaSet = new Set();
     for (var row of rows) {
         if (landType != row["단지명"])
