@@ -11,7 +11,6 @@ $(document).ready(function() {
 		},
         success : function(result) {
             rows = result;
-            rows.reverse();
             execute1();
  		}
 	});
