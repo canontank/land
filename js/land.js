@@ -100,7 +100,7 @@ function setLandContents() {
         if (areaType != "" && areaType != row["전용면적"])
             continue;
 		var isNew = false;
-		for (var i = 0; i < dataStrList.length; i++) {
+		for (var i = 0; i < dateStrList.length; i++) {
 			isNew = row['날짜'].startswith(dateStrList[0]);
 			if (isNew)
 				break;
