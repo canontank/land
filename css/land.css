@@ -34,3 +34,7 @@ button {
 .table-bordered > tfoot > tr > td {
     padding : 6px;
 }
+
+.price {
+    font-weight : 600;
+}
