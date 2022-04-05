@@ -101,7 +101,7 @@ function setLandContents() {
             continue;
 		var isNew = false;
 		for (var i = 0; i < dateStrList.length; i++) {
-			isNew = row['날짜'].startswith(dateStrList[0]);
+			isNew = row['날짜'].toString.startswith(dateStrList[i]);
 			if (isNew)
 				break;
 		}
