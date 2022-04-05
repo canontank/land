@@ -35,7 +35,7 @@ button {
     padding : 6px;
 }
 
-.new {
+.isNew {
 	background-color : red;
 	color : #fff;
 	font-weight : 600;
