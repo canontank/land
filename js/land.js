@@ -124,7 +124,7 @@ function setLandContents() {
 			.append($('<td/>', { html : row['날짜'], align : 'center' }))
 			.append($('<td/>', { html : row['전용면적'], align : 'center'  }))
 			.append($('<td/>', { html : row['층'], align : 'center'  }))
-			.append($('<td/>', { html : ((isNew) ? '<font color=red>ⓝ </font>' : '') + row['거래금액'], class : 'price' }))
+			.append($('<td/>', { html : ((isNew) ? '"<div class='new'>N</div>"' : '') + row['거래금액'], class : 'price' }))
 		);
 	}
 }
