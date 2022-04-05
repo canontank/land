@@ -35,12 +35,12 @@ function execute1() {
 }
 
 function execute2() {
-    setLandHeader();
     setAreaType();
     execute3();
 }
 
 function execute3() {
+	setLandHeader();
     setLandTitle();
     setLandContents();
 }
@@ -55,10 +55,6 @@ function setLandType() {
     }
     var iter = typeSet.values();
     landType = iter.next().value;
-}
-
-function setLandHeader() {
-    $("#landHeader").text(landType);
 }
 
 function setAreaType() {
@@ -76,6 +72,14 @@ function setAreaType() {
     for (var area of areaArray) {
         $('#areaType').append($('<option/>', { value : area, text : area }));
     }
+}
+
+function setLandHeader() {
+	var areaTypeText = "전체";
+	if (areaType != "") {
+		areaTypeText = areaType;
+	}
+    $("#landHeader").text(landType + " [" + areaTypeText + "]");
 }
 
 function setLandTitle() {
