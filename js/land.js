@@ -1,4 +1,5 @@
 var rows;
+var dateStrList = new Array('202204', '202203', '202202');
 var landType = "";
 var areaType = "";
 
@@ -98,11 +99,17 @@ function setLandContents() {
             continue;
         if (areaType != "" && areaType != row["전용면적"])
             continue;
+		var isNew = false;
+		for (var i = 0; i < dataStrList.length; i++) {
+			isNew = row['날짜'].startswith(dateStrList[0]);
+			if (isNew)
+				break;
+		}
 		$("#land").append($('<tr/>', {})
 			.append($('<td/>', { html : row['날짜'], align : 'center' }))
 			.append($('<td/>', { html : row['전용면적'], align : 'center'  }))
 			.append($('<td/>', { html : row['층'], align : 'center'  }))
-			.append($('<td/>', { html : '<font color=red>ⓝ </font>' + row['거래금액'], class : 'price' }))
+			.append($('<td/>', { html : ((isNew) ? '<font color=red>ⓝ </font>' : '') + row['거래금액'], class : 'price' }))
 		);
 	}
 }
