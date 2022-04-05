@@ -35,12 +35,15 @@ button {
     padding : 6px;
 }
 
+.price {
+	font-weight : 600;
+}
+
 .isNew {
 	background-color : red;
 	color : #fff;
-	font-weight : 600;
-	width : 10px;
-	height : 10px;
+	width : 8px;
+	height : 8px;
 	text-align : center;
 	border-radius : 50%;
 	display : inline-block;
