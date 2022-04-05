@@ -22,6 +22,8 @@ button {
 
 .table-bordered th {
     text-align : center;
+    background-color : #1f497d;
+    color : #fff;
 }
 
 .table-bordered > thead > tr > th,
