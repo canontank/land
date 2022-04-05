@@ -1,9 +1,11 @@
 var rows;
-var dateStrList = new Array('2022-04', '2022-03', '2022-02');
+var dateStrList = new Array();
 var landType = "";
 var areaType = "";
 
 $(document).ready(function() {
+	setBind();
+	setDateStrList();
 	$.ajax({
 		type: "GET",
         url : "https://script.google.com/macros/s/AKfycbwXig5n3LymBlnmLOm_7oEd240oILHTGbg8GtA39i2FR8tMRCsegrQc2OvEzGtWLAjH6Q/exec",
@@ -15,7 +17,6 @@ $(document).ready(function() {
             execute1();
  		}
 	});
-    setBind();
 });
 
 function setBind() {
@@ -23,11 +24,25 @@ function setBind() {
         landType = $(this).val();
         execute2();
     });
-    
+
     $("#areaType").on("change", function() {
         areaType = $(this).val();
         execute3();
     });
+}
+
+function setDateStrList() {
+	var dt = new Date();
+	for (var i = 0; i < 3; i++) {
+		dateStrList[i] = dt.getFullYear() + "-" + getNumberStr(dt.getMonth() + 1);
+		dt.setMonth(dt.getMonth() - 1);
+	}
+}
+
+function getNumberStr(number) {
+	if (number < 10)
+		return "0" + number;
+	return number;
 }
 
 function execute1() {
