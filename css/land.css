@@ -35,6 +35,14 @@ button {
     padding : 6px;
 }
 
-.price {
-    font-weight : 600;
+.new {
+	background-color : red;
+	color : #fff;
+	font-weight : 600;
+	width : 20px;
+	height : 20px;
+	text-align : center;
+	border-radius : 50%;
+	display : inline-block;
+	white-space : nowrap;
 }
