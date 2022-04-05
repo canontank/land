@@ -1,5 +1,5 @@
 var rows;
-var dateStrList = new Array('202204', '202203', '202202');
+var dateStrList = new Array('2022-04', '2022-03', '2022-02');
 var landType = "";
 var areaType = "";
 
