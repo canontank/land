@@ -8,7 +8,7 @@ $(document).ready(function() {
 	setDateStrList();
 	$.ajax({
 		type: "GET",
-        url : "https://script.google.com/macros/s/AKfycbwXig5n3LymBlnmLOm_7oEd240oILHTGbg8GtA39i2FR8tMRCsegrQc2OvEzGtWLAjH6Q/exec",
+        url : "https://script.google.com/macros/s/AKfycby8kfv6czRnlaYjHFOJHltZ82A_DVgE7JKPbCFMkgJkS6a-e6CMaREU6VT7kCdVH5Hs4Q/exec",
 		data: {
 			"cmd" : "get"
 		},
