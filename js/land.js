@@ -112,7 +112,7 @@ function setLandContents() {
 	var sortedRows = [...originalRows].sort(function(a, b) {
   		if (a.date > b.date) return -1;
   		if (a.date < b.date) return 1;
-  	return 0;
+  		return 0;
 	});
 	for (var row of sortedRows) {
         if (landType != row["단지명"])
