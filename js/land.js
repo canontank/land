@@ -109,7 +109,7 @@ function setLandTitle() {
 }
 
 function setLandContents() {
-	var sortedRows = [...originalRows].sort(function(a, b) {
+	var sortedRows = [...rows].sort(function(a, b) {
   		if (a[날짜] > b[날짜]) return -1;
   		if (a[날짜] < b[날짜]) return 1;
   		return 0;
