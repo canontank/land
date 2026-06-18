@@ -109,8 +109,12 @@ function setLandTitle() {
 }
 
 function setLandContents() {
-	var reversedRows = [...rows].reverse();
-	for (var row of reversedRows) {
+	var sortedRows = [...originalRows].sort(function(a, b) {
+  		if (a.date > b.date) return -1;
+  		if (a.date < b.date) return 1;
+  	return 0;
+	});
+	for (var row of sortedRows) {
         if (landType != row["단지명"])
             continue;
         if (areaType != "" && areaType != row["전용면적"])
